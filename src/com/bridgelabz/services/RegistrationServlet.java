@@ -29,6 +29,7 @@ public class RegistrationServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
 		  User user=new User();
 		  user.setFirstName(request.getParameter("firstname"));
 		  user.setLastName(request.getParameter("lastname"));
@@ -36,9 +37,15 @@ public class RegistrationServlet extends HttpServlet {
 		  user.setPassword(request.getParameter("password"));
 		  user.setEmailid(request.getParameter("emailid"));
 		  user.setMobNumber(request.getParameter("mobnum"));
-		  if(DAO.registerUser(user)) {
-			  response.sendRedirect("register.jsp");
-		  }
+		  try {
+			if(DAO.registerUser(user)) {
+				  out.println("registered!!");
+				  response.sendRedirect("register.jsp");
+				 
+			  }
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
 		  
 		  
 		  

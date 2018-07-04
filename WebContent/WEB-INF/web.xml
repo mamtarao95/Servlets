@@ -4,6 +4,9 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+<!--   <listener>
+        <listener-class>com.bridgelabz.services.MyHttpListener</listener-class>
+    </listener> -->
   <servlet>
     <servlet-name>login</servlet-name>
     <servlet-class>com.bridgelabz.services.LoginServlet</servlet-class>
@@ -20,14 +23,7 @@
     <servlet-name>registration</servlet-name>
     <url-pattern>/regservlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>welcome</servlet-name>
-    <servlet-class>com.bridgelabz.services.WelcomeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>welcome</servlet-name>
-    <url-pattern>/welcome</url-pattern>
-  </servlet-mapping>
+
   <servlet>
     <servlet-name>logoutservlet</servlet-name>
     <servlet-class>com.bridgelabz.services.LogoutServlet</servlet-class>
@@ -36,4 +32,12 @@
     <servlet-name>logoutservlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>RegisterFilter</filter-name>
+    <filter-class>com.bridgelabz.services.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RegisterFilter</filter-name>
+    <url-pattern>/regservlet</url-pattern>
+  </filter-mapping>
 </web-app>

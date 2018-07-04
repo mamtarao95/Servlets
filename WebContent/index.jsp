@@ -134,10 +134,10 @@ function myFunction() {
    
     <button type="reset" class="button2">Reset</button>
       <label for="uname"><b>User name</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" >
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="myPassword">
+      <input type="password" placeholder="Enter Password" name="psw" id="myPassword" required>
       <input type="checkbox" onclick="myFunction()">Show Password
         
       <button type="submit" style="font-size:16px;" class="button1"><b>Login</b></button>

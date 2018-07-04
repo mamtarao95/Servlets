@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,13 +35,12 @@
 	<div class="container">
 		<img src="regbackground.jpg" alt="Notebook" style="width: 100%;">
 		<div class="content">
-			<h1>Welcome</h1> 
+			<h1>Hello</h1> 
 			<h1>${sessionScope.user}</h1>
-			<p>You are Successfully logged in</p>
+			<p>You are Successfully registered</p>
+			<label>Kindly login to access our services</label>
+			<a href="index.jsp"><button class="button" type="submit">Login</button></a>
 	
-			<form action="LogoutServlet" method="post">
-				<button class="button" type="submit" value="logout">Logout</button>
-			</form>
 
 		</div>
 

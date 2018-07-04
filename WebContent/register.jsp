@@ -67,7 +67,8 @@ height:20;
 
 .login{
 float:center;
-margin-left:150px;
+text-align:center;
+
 font-size:17px;
 
 }
@@ -110,6 +111,12 @@ font-size:20px;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
+.error{
+color:red;
+text-align:center;
+font-weight:bold;
+
+}
 </style>
 </head>
 <body>
@@ -121,26 +128,29 @@ font-size:20px;
     </div>
     <h2 align=center>Sign Up</h2>
     <div class="container">
+    <br>
+    <label class="error">${error}</label>
+    <br>
       <label>FirstName</label>
-      <input type="text"  name="firstname" required>
+      <input type="text"  name="firstname">
 
       <label>LastName</label>
-      <input type="text" name="lastname" required>
+      <input type="text" name="lastname">
        
       <label>UserName</label>
-      <input type="text" name="uname" required>
+      <input type="text" name="uname">
 
       <label>Password</label>
-      <input type="text" name="password" required>
+      <input type="text" name="password">
 
 	<label>Enter Password Again</label>
-      <input type="text" name="passwordAgain" required>
+      <input type="text" name="passwordAgain">
 
       <label>Email-ID</label>
-      <input type="text" name="emailid" required>
+      <input type="text" name="emailid">
  
 	<label>MobileNumber</label>
-      <input type="text" name="mobnum" required>
+      <input type="text" name="mobnum">
 
       <button type="submit" class="submit" onclick="on()"><b>Register</b></button>
 <!--       <div id="overlay" onclick="off()">
