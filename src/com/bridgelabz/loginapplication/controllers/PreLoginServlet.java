@@ -1,4 +1,4 @@
-package com.bridgelabz.services;
+package com.bridgelabz.loginapplication.controllers;
 
 import java.io.IOException;
 

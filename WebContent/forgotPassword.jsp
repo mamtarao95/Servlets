@@ -21,11 +21,10 @@ input[type=text] {
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    height:30px;
 }
 
 button:hover {
@@ -66,15 +65,15 @@ height:20;
 }
 
 .login{
-float:center;
-text-align:center;
+float:right;
+margin-top:11px;
 
 font-size:17px;
 
 }
 
-.submit{
-font-size:20px;
+.submit1{
+font-size:17px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -88,20 +87,6 @@ font-size:20px;
     }
 }
 
-#overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
-
 #text{
     position: absolute;
     top: 50%;
@@ -111,52 +96,23 @@ font-size:20px;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
-.error{
-color:red;
-text-align:center;
-font-weight:bold;
-
-}
 </style>
 </head>
 <body>
 
 <div id="id01" class="modal">
   
-  <form class="modal-content" action="regservlet" method="post">
+  <form class="modal-content" action="recoverPassword" method="post">
     <div class="imgcontainer">
     </div>
-    <h2 align=center>Sign Up</h2>
-    <div class="container">
-    <br>
-    <label class="error">${error}</label>
-    <br>
-      <label>FirstName</label>
-      <input type="text"  name="firstname">
+    <h2 align=center>Recover Password</h2>
+   <div class="container"> 
+      <label>Enter your Email ID</label>
+      <input type="text"  name="email-id">
 
-      <label>LastName</label>
-      <input type="text" name="lastname">
-       
-      <label>UserName</label>
-      <input type="text" name="uname">
+      <button type="submit" class="submit1">GetPassword</button>
 
-      <label>Password</label>
-      <input type="text" name="password">
-
-	<label>Enter Password Again</label>
-      <input type="text" name="passwordAgain">
-
-      <label>Email-ID</label>
-      <input type="text" name="emailid">
- 
-	<label>MobileNumber</label>
-      <input type="text" name="mobnum">
-
-      <button type="submit" class="submit" onclick="on()"><b>Register</b></button>
-<!--       <div id="overlay" onclick="off()">
-  <div id="text">You are successfully registered!!!</div>
-</div> -->
-    <span class="login"><a href="index.jsp" style="text-decoration:none;">Login</a></span>
+   <!--  <span class="login"><a href="index.jsp" style="text-decoration:none;">Login</a></span> -->
     </div>
     
   </form>

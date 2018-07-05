@@ -4,12 +4,9 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-<!--   <listener>
-        <listener-class>com.bridgelabz.services.MyHttpListener</listener-class>
-    </listener> -->
   <servlet>
     <servlet-name>login</servlet-name>
-    <servlet-class>com.bridgelabz.services.LoginServlet</servlet-class>
+    <servlet-class>com.bridgelabz.loginapplication.controllers.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>login</servlet-name>
@@ -17,24 +14,33 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>registration</servlet-name>
-    <servlet-class>com.bridgelabz.services.RegistrationServlet</servlet-class>
+    <servlet-class>com.bridgelabz.loginapplication.controllers.RegistrationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>registration</servlet-name>
     <url-pattern>/regservlet</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <servlet-name>logoutservlet</servlet-name>
-    <servlet-class>com.bridgelabz.services.LogoutServlet</servlet-class>
+    <servlet-class>com.bridgelabz.loginapplication.controllers.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>logoutservlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PreRegisterservlet</servlet-name>
+    <servlet-class>com.bridgelabz.loginapplication.controllers.PreRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreRegisterservlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
   <filter>
     <filter-name>RegisterFilter</filter-name>
-    <filter-class>com.bridgelabz.services.LoginFilter</filter-class>
+    <filter-class>com.bridgelabz.loginapplication.controllers.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>RegisterFilter</filter-name>

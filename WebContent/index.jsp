@@ -145,8 +145,8 @@ function myFunction() {
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-    <span class="reg">Don't have an account? <a href="register.jsp" style="text-decoration:none;"> Register </a></span>
-      <span class="psw">Forgot <a href="#" style="text-decoration:none;">password?</a></span>
+    <span class="reg">Don't have an account? <a href="<%=request.getContextPath()%>/register" style="text-decoration:none;"> Register </a></span>
+      <span class="psw">Forgot <a href="forgotPassword.jsp" style="text-decoration:none;">password?</a></span>
     </div>
   </form>
 </div>

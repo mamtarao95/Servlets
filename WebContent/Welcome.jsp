@@ -9,7 +9,7 @@
 <style>
 .container {
 	position: relative;
-	max-width: 800px; /* Maximum width */
+	max-width: 100%; /* Maximum width */
 	margin: 0 auto; /* Center it */
 }
 
@@ -32,9 +32,14 @@
 </style>
 </head>
 <body>
+<%        
+    response.setHeader("Pragma", "No-cache");
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setDateHeader("Expires", -1);
+%>
 
 	<div class="container">
-		<img src="regbackground.jpg" alt="Notebook" style="width: 100%;">
+		<img src="regbackground.jpg" alt="Notebook" style="width:100%;">
 		<div class="content">
 			<h1>Welcome</h1> 
 			<h1>${sessionScope.user}</h1>
